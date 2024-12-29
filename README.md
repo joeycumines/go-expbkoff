@@ -1,14 +1,22 @@
 # Backoff
 
+## Preface
+
+Forked from [jpillora/backoff](https://github.com/jpillora/backoff) due to the
+lack of response from the original author. PR still open, but I'll maintain
+this fork even in the unlikely event that it gets merged.
+
+## Introduction
+
 A simple exponential backoff counter in Go (Golang)
 
-[![GoDoc](https://godoc.org/github.com/jpillora/backoff?status.svg)](https://godoc.org/github.com/jpillora/backoff)
-[![Build Status](https://github.com/jpillora/backoff/actions/workflows/build.yml/badge.svg)](https://github.com/jpillora/backoff/actions/workflows/build.yml)
+[![GoDoc](https://godoc.org/github.com/joeycumines/go-expbkoff?status.svg)](https://godoc.org/github.com/joeycumines/go-expbkoff)
+[![Build Status](https://github.com/joeycumines/go-expbkoff/actions/workflows/build.yml/badge.svg)](https://github.com/joeycumines/go-expbkoff/actions/workflows/build.yml)
 
 ### Install
 
 ```
-$ go get -v github.com/jpillora/backoff
+$ go get -v github.com/joeycumines/go-expbkoff
 ```
 
 ### Usage
@@ -19,7 +27,7 @@ For a higher-level API, see [Retry](#example-using-retry).
 
 #### Documentation
 
-https://pkg.go.dev/github.com/jpillora/backoff
+https://pkg.go.dev/github.com/joeycumines/go-expbkoff
 
 ---
 

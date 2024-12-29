@@ -1,5 +1,5 @@
-// Package backoff provides an exponential-backoff implementation.
-package backoff
+// Package expbkoff provides an exponential-backoff implementation.
+package expbkoff
 
 import (
 	"math"

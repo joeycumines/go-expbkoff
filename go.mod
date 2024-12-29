@@ -1,3 +1,3 @@
-module github.com/jpillora/backoff
+module github.com/joeycumines/go-expbkoff
 
 go 1.13
