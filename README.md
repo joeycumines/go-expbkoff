@@ -13,25 +13,25 @@ A simple exponential backoff counter in Go (Golang)
 [![GoDoc](https://godoc.org/github.com/joeycumines/go-expbkoff?status.svg)](https://godoc.org/github.com/joeycumines/go-expbkoff)
 [![Build Status](https://github.com/joeycumines/go-expbkoff/actions/workflows/build.yml/badge.svg)](https://github.com/joeycumines/go-expbkoff/actions/workflows/build.yml)
 
-### Install
+## Install
 
 ```
 $ go get -v github.com/joeycumines/go-expbkoff
 ```
 
-### Usage
+## Usage
 
 Backoff is a `time.Duration` counter. It starts at `Min`. After every call to `Duration()` it is  multiplied by `Factor`. It is capped at `Max`. It returns to `Min` on every call to `Reset()`. `Jitter` adds randomness ([see below](#example-using-jitter)). Used in conjunction with the `time` package.
 
 For a higher-level API, see [Retry](#example-using-retry).
 
-#### Documentation
+### Documentation
 
 https://pkg.go.dev/github.com/joeycumines/go-expbkoff
 
 ---
 
-#### Simple example
+### Simple example
 
 ``` go
 
@@ -63,7 +63,7 @@ Reset!
 
 ---
 
-#### Example using `net` package
+### Example using `net` package
 
 ``` go
 b := &backoff.Backoff{
@@ -90,7 +90,7 @@ for {
 
 ---
 
-#### Example using `Jitter`
+### Example using `Jitter`
 
 Enabling `Jitter` adds some randomization to the backoff durations. [See Amazon's writeup of performance gains using jitter](http://www.awsarchitectureblog.com/2015/03/backoff.html). Seeding is not necessary but doing so gives repeatable results.
 
@@ -127,7 +127,7 @@ Reset!
 
 ---
 
-#### Example using `Retry`
+### Example using `Retry`
 
 The `Retry` type extends `Backoff` to provide a simpler, higher-level API for implementing exponential backoff/retry logic.
 Here's an example of how you can use it:
@@ -175,6 +175,6 @@ doSomethingWithRetry := func(maxAttempts int) (err error) {
 
 ---
 
-#### Credits
+### Credits
 
 Forked from [some JavaScript](https://github.com/segmentio/backo) written by [@tj](https://github.com/tj)
